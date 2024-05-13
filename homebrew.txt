@@ -1,0 +1,16 @@
+bat
+bottom
+btop
+direnv
+fd
+fzf
+gcc
+gdu
+go
+htop
+lazygit
+lsd
+neovim
+ripgrep
+zig
+zoxide
