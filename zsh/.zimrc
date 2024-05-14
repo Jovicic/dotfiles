@@ -20,6 +20,8 @@ zmodule termtitle
 zmodule utility
 # auto venv activation
 zmodule MichaelAquilina/zsh-autoswitch-virtualenv -n autoswitch_virtualenv
+# nvm plugin
+zmodule lukechilds/zsh-nvm
 
 #
 # Prompt
