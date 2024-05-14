@@ -28,10 +28,11 @@ return {
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
-        signcolumn = "yes:1", -- sets vim.opt.signcolumn
+        signcolumn = "yes:2", -- sets vim.opt.signcolumn
         wrap = false, -- sets vim.opt.wrap
-        numberwidth = 5,
-        scrolloff = 10,
+        numberwidth = 5, --width of the number column
+        scrolloff = 10, -- number of lines to keep above and below the cursor
+        foldcolumn = "0", -- disable foldcolumn
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
