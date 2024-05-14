@@ -139,9 +139,8 @@ unset key
 # setup your config below
 
 # setup paths
-# example for adding zig to path:
-# path=($HOME/zig-linux-x86_64-0.12.0 $path)
-# export PATH
+path+=($HOME/.local/bin)
+export PATH
 
 # setup env vars
 export EDITOR=nvim  # set standard editor
