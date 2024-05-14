@@ -34,8 +34,6 @@ return {
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.lsp.actions-preview-nvim" },
-  { import = "astrocommunity.recipes.disable-tabline" },
-  { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
   { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
   { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },

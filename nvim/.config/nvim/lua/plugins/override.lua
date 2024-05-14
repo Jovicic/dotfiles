@@ -1,4 +1,11 @@
 return {
+  -- disable the tabline display
+  {
+    "AstroNvim/astrocore",
+    ---@param opts AstroCoreOpts
+    opts = function(_, opts) opts.options.opt.showtabline = 0 end,
+  },
+
   -- arrow bookmarking plugin (harpoon-like)
   {
     "otavioschwanck/arrow.nvim",
@@ -80,6 +87,9 @@ return {
         status.component.signcolumn(), -- set signcolumn before numbercolumn
         status.component.numbercolumn { numbercolumn = { culright = false } }, -- don't align the current line number to the right
       }
+
+      -- remove the tabline definition
+      opts.tabline = nil
     end,
   },
 
