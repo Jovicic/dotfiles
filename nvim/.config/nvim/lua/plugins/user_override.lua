@@ -1,9 +1,8 @@
 return {
-  -- disable the tabline display
+  -- change neo-tree opening behaviour to default
   {
-    "AstroNvim/astrocore",
-    ---@param opts AstroCoreOpts
-    opts = function(_, opts) opts.options.opt.showtabline = 0 end,
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = function(_, opts) opts.filesystem.hijack_netrw_behavior = "open_default" end,
   },
 
   -- arrow bookmarking plugin (harpoon-like)
@@ -27,18 +26,18 @@ return {
     opts = function(_, opts)
       local status = require "astroui.status"
       local is_available = require("astrocore").is_available
-      local arrow_statusline = require "arrow.statusline"
+      local arrow_statusline
+      if is_available "arrow.nvim" then arrow_statusline = require "arrow.statusline" end
 
       -- define the arrow component
       local arrow = function()
         return status.component.builder {
           provider = function()
-            local available = is_available "arrow.nvim"
-            if available and arrow_statusline.is_on_arrow_file() then
-              return "[" .. arrow_statusline.text_for_statusline_with_icons() .. "]"
+            if arrow_statusline and arrow_statusline.is_on_arrow_file() then
+              return arrow_statusline.text_for_statusline_with_icons()
             end
           end,
-          hl = { fg = "#98c379", bold = true },
+          hl = { fg = "treesitter_fg", bold = true },
         }
       end
 
@@ -50,7 +49,7 @@ return {
             separator = "left",
             condition = function() return vim.bo.fenc ~= "utf-8" end,
           },
-          hl = { fg = "orange" },
+          hl = { fg = "git_changed" },
           update = "BufModifiedSet",
         }
       end
@@ -70,11 +69,13 @@ return {
         status.component.file_info {
           filename = { modify = ":." },
           filetype = false,
-          file_modified = { hl = { fg = "orange" } },
+          file_modified = { hl = {
+            fg = "orange",
+          } },
         }, -- add relative path to the filename
         status.component.fill(),
         status.component.cmd_info(),
-        status.component.lsp { lsp_progress = false },
+        status.component.lsp { lsp_progress = false }, -- progress is handled by fidget
         status.component.virtual_env(),
         status.component.treesitter(),
         status.component.nav(),
