@@ -13,7 +13,7 @@ config.initial_rows = 40
 -- set renderer
 config.front_end = "WebGpu"
 
-config.color_scheme = "catppuccin-mocha"
+config.color_scheme = "Catppuccin Mocha"
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 14.0
@@ -26,9 +26,7 @@ end
 
 -- config.enable_tab_bar = true
 config.tab_bar_at_bottom = true
-config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
-config.tab_max_width = 25
 
 -- this padding matches kitty terminal defaults(visually)
 config.window_padding = {
