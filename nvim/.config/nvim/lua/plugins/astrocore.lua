@@ -33,11 +33,43 @@ return {
         numberwidth = 5, --width of the number column
         scrolloff = 10, -- number of lines to keep above and below the cursor
         foldcolumn = "0", -- disable foldcolumn
+        showtabline = 0, -- disable the tabline display
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+      },
+    },
+    sessions = {
+      -- Configure auto saving
+      autosave = {
+        last = true, -- auto save last session
+        cwd = true, -- auto save session for each working directory
+      },
+      -- Patterns to ignore when saving sessions
+      ignore = {
+        dirs = {}, -- working directories to ignore sessions in
+        filetypes = { "gitcommit", "gitrebase" }, -- filetypes to ignore sessions
+        buftypes = {}, -- buffer types to ignore sessions
+      },
+    },
+    autocmds = {
+      -- disable alpha autostart
+      alpha_autostart = false,
+      restore_session = {
+        {
+          event = "VimEnter",
+          desc = "Restore previous directory session if neovim opened with no arguments",
+          nested = true, -- trigger other autocommands as buffers open
+          callback = function()
+            -- Only load the session if nvim was started with no args
+            if vim.fn.argc(-1) == 0 then
+              -- try to load a directory session using the current working directory
+              require("resession").load(vim.fn.getcwd(), { dir = "dirsession", silence_errors = true })
+            end
+          end,
+        },
       },
     },
     -- Mappings can be configured through AstroCore as well.
