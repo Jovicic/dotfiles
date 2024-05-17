@@ -1,3 +1,5 @@
+local leet_arg = "leetcode.nvim"
+
 return {
   -- change neo-tree opening behaviour to default
   {
@@ -129,6 +131,27 @@ return {
       notification = {
         override_vim_notify = true,
       },
+    },
+  },
+  {
+    "kawre/leetcode.nvim",
+    build = ":TSUpdate html",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim", -- required by telescope
+      "MunifTanjim/nui.nvim",
+
+      -- optional
+      "nvim-treesitter/nvim-treesitter",
+      -- "rcarriga/nvim-notify",
+      "nvim-tree/nvim-web-devicons",
+    },
+    -- start leetcode when starting nvim like this: 'nvim leetcode.nvim'
+    lazy = leet_arg ~= vim.fn.argv()[1],
+    opts = {
+      lang = "python3",
+      image_support = true,
+      arg = leet_arg,
     },
   },
 }
