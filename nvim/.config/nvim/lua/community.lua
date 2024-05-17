@@ -28,6 +28,7 @@ return {
   { import = "astrocommunity.editing-support.refactoring-nvim" },
   { import = "astrocommunity.editing-support.undotree" },
   { import = "astrocommunity.editing-support.treesj" },
+  { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.mini-ai" },
   { import = "astrocommunity.motion.mini-move" },
