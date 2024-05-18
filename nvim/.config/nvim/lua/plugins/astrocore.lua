@@ -33,7 +33,9 @@ return {
         numberwidth = 5, --width of the number column
         scrolloff = 10, -- number of lines to keep above and below the cursor
         foldcolumn = "0", -- disable foldcolumn
+        foldenable = false, -- disable folding
         showtabline = 0, -- disable the tabline display
+        updatetime = 50, -- decrease update time
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
