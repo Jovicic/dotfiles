@@ -6,11 +6,16 @@ fd
 fzf
 gcc
 gdu
+gh
 go
 htop
 lazygit
 lsd
+luarocks
 neovim
 ripgrep
+stow
+tree-sitter
+zellij
 zig
 zoxide
