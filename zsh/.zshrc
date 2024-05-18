@@ -159,5 +159,8 @@ eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 
+# User specific environment and startup programs
+. "$HOME/.cargo/env"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
