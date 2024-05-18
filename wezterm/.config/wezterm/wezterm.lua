@@ -14,6 +14,7 @@ config.initial_rows = 40
 config.front_end = "WebGpu"
 
 config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "tokyonight_night"
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 14.0
