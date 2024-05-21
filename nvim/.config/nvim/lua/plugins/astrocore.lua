@@ -73,6 +73,16 @@ return {
           end,
         },
       },
+      disable_mouse_info_popup = {
+        {
+          event = "VimEnter",
+          desc = "Remove the 'How-to disable mouse' popup",
+          callback = function()
+            vim.cmd "aunmenu PopUp.How-to\\ disable\\ mouse"
+            vim.cmd "aunmenu PopUp.-1-"
+          end,
+        },
+      },
     },
     -- Mappings can be configured through AstroCore as well.
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
