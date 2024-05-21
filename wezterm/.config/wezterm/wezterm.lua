@@ -13,8 +13,14 @@ config.initial_rows = 40
 -- set renderer
 config.front_end = "WebGpu"
 
-config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Catppuccin Macchiato"
 -- config.color_scheme = "tokyonight_night"
+-- config.color_scheme = "tokyonight_moon"
+-- config.color_scheme = "Kanagawa (Gogh)"
+-- config.color_scheme = "Everforest Dark (Gogh)"
+-- config.color_scheme = "Rosé Pine (Gogh)"
+-- config.color_scheme = "GruvboxDark"
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 14.0
