@@ -27,6 +27,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.full-dadbod" },
   { import = "astrocommunity.pack.zig" },
+  { import = "astrocommunity.comment.ts-comments-nvim" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
