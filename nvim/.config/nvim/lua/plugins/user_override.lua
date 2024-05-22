@@ -133,6 +133,7 @@ return {
       },
     },
   },
+  -- leetcode plugin. start with 'nvim leetcode.nvim'
   {
     "kawre/leetcode.nvim",
     build = ":TSUpdate html",
@@ -146,12 +147,43 @@ return {
       -- "rcarriga/nvim-notify",
       "nvim-tree/nvim-web-devicons",
     },
-    -- start leetcode when starting nvim like this: 'nvim leetcode.nvim'
     lazy = leet_arg ~= vim.fn.argv()[1],
     opts = {
-      lang = "python3",
+      lang = "python3", -- default language
       image_support = true,
       arg = leet_arg,
     },
+  },
+  -- restore some defaults of aerial.nvim
+  {
+    "stevearc/aerial.nvim",
+    opts = function(_, opts)
+      opts.filter_kind = {
+        "Class",
+        "Constructor",
+        "Enum",
+        "Function",
+        "Interface",
+        "Module",
+        "Method",
+        "Struct",
+      }
+    end,
+  },
+  -- treesitter textobjects peek config
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      opts.textobjects = {
+        lsp_interop = {
+          enable = true,
+          border = "none",
+          peek_definition_code = {
+            ["<leader>df"] = "@function.outer",
+            ["<leader>dF"] = "@function.inner",
+          },
+        },
+      }
+    end,
   },
 }
