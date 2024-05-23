@@ -5,6 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# setup homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# add zsh completions installed by homebrew
+fpath+=($(brew --prefix)/share/zsh/site-functions)
+
 # Start configuration added by Zim install {{{
 #
 # User configuration sourced by interactive shells
@@ -152,9 +157,7 @@ alias vim=nvim
 alias ls=lsd
 alias gdu=gdu-go
 
-# setup homebrew first
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# afterwards setup the rest
+# initialize additional tools
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
