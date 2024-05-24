@@ -83,13 +83,6 @@ return {
           end,
         },
       },
-      disable_comment_on_new_line = {
-        {
-          event = "BufWinEnter",
-          desc = "Disable comment on new line when previous line is commented out",
-          callback = function() vim.cmd "set formatoptions-=cro" end,
-        },
-      },
     },
     -- Mappings can be configured through AstroCore as well.
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
