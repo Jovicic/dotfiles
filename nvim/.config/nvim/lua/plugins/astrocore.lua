@@ -83,6 +83,14 @@ return {
           end,
         },
       },
+      nvim_create_autocmd = {
+        {
+          event = "FileType",
+          desc = "Remove 'o' from formatoptions for all filetypes, disabling auto-insertion of comment on new line when pressing `o` in normal mode",
+          pattern = "*",
+          callback = function() vim.opt.formatoptions:remove "o" end,
+        },
+      },
     },
     -- Mappings can be configured through AstroCore as well.
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
