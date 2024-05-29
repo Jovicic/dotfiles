@@ -28,7 +28,7 @@ return {
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
-        signcolumn = "yes:2", -- sets vim.opt.signcolumn
+        signcolumn = "yes:3", -- sets vim.opt.signcolumn
         wrap = false, -- sets vim.opt.wrap
         numberwidth = 5, --width of the number column
         scrolloff = 10, -- number of lines to keep above and below the cursor
@@ -42,6 +42,9 @@ return {
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
       },
+      -- rooter = {
+      --   autochdir = true, -- auto change directory to the root of the project
+      -- },
     },
     sessions = {
       -- Configure auto saving

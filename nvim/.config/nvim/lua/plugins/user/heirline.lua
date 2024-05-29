@@ -58,7 +58,6 @@ return {
         status.component.virtual_env(),
         status.component.treesitter(),
         status.component.nav(),
-        status.component.mode { surround = { separator = "right" } },
       }
       -- rebuild the statuscolumn
       opts.statuscolumn = {
