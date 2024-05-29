@@ -44,5 +44,7 @@ return {
   { import = "astrocommunity.lsp.actions-preview-nvim" },
   { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
   { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
+  { import = "astrocommunity.project.nvim-spectre" },
+  { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 }
