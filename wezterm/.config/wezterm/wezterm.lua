@@ -26,7 +26,8 @@ config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 14.0
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-	config.default_prog = { "pwsh.exe", "-NoLogo" }
+	-- config.default_prog = { "pwsh.exe", "-NoLogo" }
+	config.default_domain = 'WSL:Ubuntu-24.04'
 elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
 	config.default_prog = { "/usr/bin/zsh" }
 end
