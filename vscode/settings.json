@@ -40,7 +40,8 @@
     "editor.lineNumbers": "relative",
     "vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim/nvim",
     "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
+        "asvetliakov.vscode-neovim": 1,
+        "vscodevim.vim": 1
     },
     "vscode-neovim.useWSL": true,
     "vim.flash.enable": true,
@@ -54,6 +55,17 @@
                 ":nohl"
             ],
         }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.files.save",
+            ]
+        },
     ],
     "vim.incsearch": true,
     "vim.visualModeKeyBindings": [
@@ -87,4 +99,13 @@
             ]
         }
     ],
+    "vim.enableNeovim": false,
+    "vim.neovimPath": "~/.local/bin/nvim",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-c>": false,
+        "<C-v>": false
+    },
+    "vim.visualstar": true
 }
