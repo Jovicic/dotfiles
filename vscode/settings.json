@@ -1,0 +1,90 @@
+{
+    "workbench.colorTheme": "Anysphere dark",
+    "redhat.telemetry.enabled": false,
+    "window.commandCenter": true,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "window.zoomLevel": 1.0,
+    "github.experimental.multipleAccounts": true,
+    "telemetry.telemetryLevel": "off",
+    "cursor.cpp.enablePartialAccepts": true,
+    "workbench.iconTheme": "vscode-icons",
+    "python.analysis.ignore": [
+        "*"
+    ],
+    "projectManager.any.baseFolders": [
+        "~/projects/",
+    ],
+    "projectManager.any.maxDepthRecursion": 1,
+    "projectManager.sortList": "Recent",
+    "projectManager.removeCurrentProjectFromList": false,
+    "remote.extensionKind": {
+        "alefragnani.project-manager": [
+            "workspace"
+        ]
+    },
+    "vim.highlightedyank.enable": true,
+    "vim.leader": " ",
+    "vim.replaceWithRegister": true,
+    "vim.textwidth": 160,
+    "vim.useSystemClipboard": true,
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "githd.blameView.enabled": false,
+    "editor.smoothScrolling": true,
+    "editor.cursorSurroundingLines": 10,
+    "editor.minimap.enabled": true,
+    "editor.minimap.autohide": true,
+    "editor.lineNumbers": "relative",
+    "vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim/nvim",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "vscode-neovim.useWSL": true,
+    "vim.flash.enable": true,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<Esc>"
+            ],
+            "commands": [
+                ":nohl"
+            ],
+        }
+    ],
+    "vim.incsearch": true,
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "p",
+            ],
+            "after": [
+                "p",
+                "g",
+                "v",
+                "y"
+            ]
+        }
+    ],
+}
