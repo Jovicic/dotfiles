@@ -27,7 +27,7 @@
     "vim.highlightedyank.enable": true,
     "vim.leader": " ",
     "vim.replaceWithRegister": true,
-    "vim.textwidth": 160,
+    "vim.textwidth": 120,
     "vim.useSystemClipboard": true,
     "gitlens.plusFeatures.enabled": false,
     "gitlens.currentLine.enabled": false,
@@ -37,7 +37,6 @@
     "editor.cursorSurroundingLines": 10,
     "editor.minimap.enabled": true,
     "editor.minimap.autohide": true,
-    "editor.lineNumbers": "relative",
     "vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim/nvim",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1,
@@ -54,6 +53,7 @@
             "commands": [
                 ":nohl"
             ],
+            "silent": true
         }
     ],
     "vim.normalModeKeyBindings": [
@@ -99,6 +99,7 @@
             ]
         }
     ],
+    "gitlens.launchpad.indicator.enabled": false,
     "vim.enableNeovim": false,
     "vim.neovimPath": "~/.local/bin/nvim",
     "vim.handleKeys": {
@@ -107,5 +108,9 @@
         "<C-c>": false,
         "<C-v>": false
     },
-    "vim.visualstar": true
+    "vim.visualstar": true,
+    "numberedBookmarks.navigateThroughAllFiles": "replace",
+    "AREPL.telemetry": false,
+    "docker-explorer.enableTelemetry": false,
+    "code-runner.enableAppInsights": false
 }
