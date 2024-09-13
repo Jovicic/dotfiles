@@ -112,5 +112,6 @@
     "numberedBookmarks.navigateThroughAllFiles": "replace",
     "AREPL.telemetry": false,
     "docker-explorer.enableTelemetry": false,
-    "code-runner.enableAppInsights": false
+    "code-runner.enableAppInsights": false,
+    "workbench.activityBar.orientation": "vertical",
 }
