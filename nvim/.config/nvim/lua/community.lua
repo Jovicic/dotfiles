@@ -10,7 +10,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
-  { import = "astrocommunity.colorscheme.catppuccin" },
+  -- { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.bash" },
@@ -26,7 +26,7 @@ return {
   { import = "astrocommunity.neovim-lua-development.lazydev-nvim" },
   { import = "astrocommunity.comment.ts-comments-nvim" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
-  -- { import = "astrocommunity.completion.codeium-vim" },
+  { import = "astrocommunity.completion.codeium-vim" },
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.editing-support.refactoring-nvim" },
@@ -46,5 +46,7 @@ return {
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.recipes.auto-session-restore" },
+  { import = "astrocommunity.recipes.neovide" },
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
+  { import = "astrocommunity.recipes.vscode" },
 }
