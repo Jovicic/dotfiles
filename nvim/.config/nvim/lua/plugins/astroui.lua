@@ -3,7 +3,7 @@
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
 --       as this provides autocomplete and documentation while editing
 
-if vim.g.vscode then return {} end
+if vim.g.vscode == true then return {} end
 
 ---@type LazySpec
 return {
@@ -11,7 +11,9 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "tokyonight-storm",
+    colorscheme = "kanagawa-paper",
+    -- colorscheme = "kanagawa",
+    -- colorscheme = "tokyonight-storm",
     -- colorscheme = "catppuccin-macchiato",
   },
 }
