@@ -1,6 +1,5 @@
 code --install-extension alefragnani.numbered-bookmarks
 code --install-extension alefragnani.project-manager
-code --install-extension anysphere.pyright
 code --install-extension asvetliakov.vscode-neovim
 code --install-extension charliermarsh.ruff
 code --install-extension daltonmenezes.aura-theme
@@ -12,7 +11,6 @@ code --install-extension metaphore.kanagawa-vscode-color-theme
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-python.debugpy
 code --install-extension ms-python.python
-code --install-extension ms-python.vscode-pylance
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension ms-vscode.azure-repos
@@ -21,5 +19,4 @@ code --install-extension ms-vscode.cpptools
 code --install-extension ms-vscode.cpptools-extension-pack
 code --install-extension ms-vscode.remote-repositories
 code --install-extension pkief.material-icon-theme
-code --install-extension simonho.kanagawa-paper
 code --install-extension twxs.cmake
