@@ -128,5 +128,16 @@
   "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
   "find-it-faster.findWithinFiles.fuzzRipgrepQuery": true,
   "python.terminal.activateEnvironment": false,
-  "workbench.colorTheme": "Kanagawa Dragon"
+  "workbench.colorTheme": "Kanagawa Dragon",
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "basedpyright.analysis.typeCheckingMode": "basic",
+  "basedpyright.analysis.diagnosticSeverityOverrides": {
+    "reportUnusedImport": "none",
+    "reportUnusedFunction": "none",
+    "reportUnusedVariable": "none",
+    // "reportGeneralTypeIssues": "none",
+    // "reportOptionalMemberAccess": "none",
+    // "reportOptionalSubscript": "none",
+    // "reportPrivateImportUsage": "none",
+  }
 }
