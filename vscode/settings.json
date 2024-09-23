@@ -8,7 +8,7 @@
   "telemetry.telemetryLevel": "off",
   "cursor.cpp.enablePartialAccepts": true,
   "python.analysis.ignore": [
-    "*"
+    // "*"
   ],
   "projectManager.any.baseFolders": [
     "~/projects/",
@@ -26,7 +26,7 @@
   "editor.cursorSurroundingLines": 10,
   "editor.minimap.enabled": true,
   "editor.minimap.autohide": true,
-  "vscode-neovim.neovimExecutablePaths.linux": "~/.local/bin/nvim",
+  "vscode-neovim.neovimExecutablePaths.linux": "/home/linuxbrew/.linuxbrew/bin/nvim",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1,
     "vscodevim.vim": 1
@@ -66,7 +66,7 @@
     "size": 28
   },
   // "apc.electron": {
-    //   "titleBarStyle": "hiddenInset",
+  //   "titleBarStyle": "hiddenInset",
   // },
   "apc.font.family": "JetbrainsMono Nerd Font",
   "apc.monospace.font.family": "JetbrainsMono Nerd Font",
@@ -77,8 +77,8 @@
   },
   // Cusom css
   "apc.stylesheet": {
-    ".sidebar > .composite": "height: 12px !important",
-    ".title-label": "display: none !important",
+    // ".sidebar > .composite": "height: 12px !important",
+    // ".title-label": "display: none !important",
     // ".title-actions": "display: none !important",
     // ".tabs-and-actions-container > .editor-actions": "display: none !important",
     ".titlebar-center": "display: none !important",
@@ -99,7 +99,6 @@
   // },
   // Misc
   "workbench.startupEditor": "none",
-  "explorer.compactFolders": false,
   // "editor.tabSize": 4,
   "editor.linkedEditing": true,
   "breadcrumbs.filePath": "on",
@@ -110,11 +109,24 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   // Neovim
-  // "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.lua",
+  // "vscode-neovim.neovimInitVimPaths.linux": "/home/grim/.config/nvim/init.lua",
   "editor.experimental.asyncTokenization": true,
   "vscode-neovim.afterInitConfig": [
     "set cmdheight=2"
   ],
   "git.openRepositoryInParentFolders": "never",
-  "workbench.colorTheme": "Kanagawa Paper",
+  "find-it-faster.general.useTerminalInEditor": true,
+  "terminal.integrated.allowChords": false,
+  "cursor.general.enableShadowWorkspace": true,
+  "explorer.autoRevealExclude": {
+    "**/.venv": true
+  },
+  "search.exclude": {
+    "**/.venv": true
+  },
+  "terminal.external.linuxExec": "/usr/bin/zsh",
+  "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+  "find-it-faster.findWithinFiles.fuzzRipgrepQuery": true,
+  "python.terminal.activateEnvironment": false,
+  "workbench.colorTheme": "Kanagawa Dragon"
 }
