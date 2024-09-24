@@ -139,5 +139,8 @@
     // "reportOptionalMemberAccess": "none",
     // "reportOptionalSubscript": "none",
     // "reportPrivateImportUsage": "none",
-  }
+  },
+  "httpyac.cookieJarEnabled": false,
+  "ruff.lineLength": 120,
+  "remote.autoForwardPortsSource": "hybrid"
 }
