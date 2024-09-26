@@ -11,6 +11,8 @@ brew "btop"
 brew "corepack"
 # Load/unload environment variables based on $PWD
 brew "direnv"
+# .NET Core
+brew "dotnet"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Command-line fuzzy finder written in Go
@@ -47,6 +49,10 @@ brew "tree-sitter"
 brew "neovim"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Safe, concurrent, practical language
+brew "rust"
+# Rust toolchain installer
+brew "rustup"
 # Generate type safe Go from SQL
 brew "sqlc"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
