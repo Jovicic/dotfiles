@@ -140,7 +140,11 @@
     // "reportOptionalSubscript": "none",
     // "reportPrivateImportUsage": "none",
   },
+  "editor.rulers": [
+    120,
+  ],
   "httpyac.cookieJarEnabled": false,
   "ruff.lineLength": 120,
-  "remote.autoForwardPortsSource": "hybrid"
+  "remote.autoForwardPortsSource": "hybrid",
+  "editor.cursorBlinking": "solid"
 }
