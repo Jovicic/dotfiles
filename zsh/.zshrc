@@ -144,6 +144,7 @@ export PATH
 export EDITOR=nvim  # set standard editor
 export AUTOSWITCH_SILENT=1  # don't show python virtualenv switch messages
 export HOMEBREW_NO_ANALYTICS=1  # don't send analytics to homebrew
+export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
 
 # setup aliases
 alias vim=nvim

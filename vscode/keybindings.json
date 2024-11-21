@@ -117,7 +117,7 @@
   },
   {
     "key": "ctrl+'",
-    "command": "workbench.action.terminal.toggleTerminal",
+    "command": "workbench.action.terminal.toggleTerminal"
   },
   {
     "key": "ctrl+shift+t",
@@ -155,13 +155,13 @@
   {
     "key": "ctrl+f",
     "command": "vscode-neovim.send",
-    "args": "<C-f>",
+    "args": "<C-f>"
     // "when": "neovim.mode != 'insert'"
   },
   {
     "key": "ctrl+b",
     "command": "vscode-neovim.send",
-    "args": "<C-b>",
+    "args": "<C-b>"
     // "when": "neovim.mode != 'insert'"
   },
   // minimove
@@ -180,12 +180,12 @@
   //minimove end
   {
     "key": "ctrl+f",
-    "command": "workbench.action.nextEditorInGroup",
+    "command": "workbench.action.nextEditorInGroup"
     // "when": "editorTextFocus"
   },
   {
     "key": "ctrl+b",
-    "command": "workbench.action.previousEditorInGroup",
+    "command": "workbench.action.previousEditorInGroup"
     // "when": "editorTextFocus"
   },
   // fix scroll sttart
