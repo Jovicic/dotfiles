@@ -6,9 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # setup homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # add zsh completions installed by homebrew
-fpath+=($(brew --prefix)/share/zsh/site-functions)
+# fpath+=($(brew --prefix)/share/zsh/site-functions)
 
 # Start configuration added by Zim install {{{
 #
@@ -145,25 +145,33 @@ unset key
 
 # setup paths
 path+=($HOME/.local/bin)
+# path+=($HOME/apps/zig13)
+# path+=(/opt/nvim)
 export PATH
 
 # setup env vars
 export EDITOR=nvim  # set standard editor
 export AUTOSWITCH_SILENT=1  # don't show python virtualenv switch messages
 export HOMEBREW_NO_ANALYTICS=1  # don't send analytics to homebrew
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 
 # setup aliases
 alias vim=nvim
 alias ls=lsd
-alias gdu=gdu-go
+alias bat=batcat
+# alias gdu=gdu-go
 
 # initialize additional tools
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
-eval "$(fzf --zsh)"
+eval "$(pyenv init -)"
+# eval "$(fzf --zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.config/wezterm/wezterm.sh ] && source ~/.config/wezterm/wezterm.sh
 
 # User specific environment and startup programs
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
