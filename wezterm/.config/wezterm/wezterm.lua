@@ -11,7 +11,19 @@ config.initial_cols = 160
 config.initial_rows = 40
 
 -- set renderer
-config.front_end = "WebGpu"
+-- config.front_end = "WebGpu"
+-- config.front_end = "OpenGL"
+-- config.mux_output_parser_coalesce_delay_ms = 3
+for _, gpu in ipairs(wezterm.gui.enumerate_gpus()) do
+	if gpu.backend == "Dx12" and gpu.device_type == "IntegratedGpu" then
+		config.webgpu_preferred_adapter = gpu
+		config.front_end = "WebGpu"
+		break
+	end
+end
+-- local gpus = wezterm.gui.enumerate_gpus()
+-- config.webgpu_preferred_adapter = gpus[1]
+-- config.front_end = "WebGpu"
 
 -- config.color_scheme = "Catppuccin Mocha"
 -- config.color_scheme = "Catppuccin Macchiato"
@@ -27,7 +39,7 @@ config.font_size = 14.0
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	-- config.default_prog = { "pwsh.exe", "-NoLogo" }
-	config.default_domain = 'WSL:Ubuntu-24.04'
+	config.default_domain = "WSL:Ubuntu"
 elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
 	config.default_prog = { "/usr/bin/zsh" }
 end
