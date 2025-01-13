@@ -7,10 +7,12 @@ brew "bat"
 brew "bottom"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
-# Package acting as bridge between Node projects and their package managers
-brew "corepack"
 # Load/unload environment variables based on $PWD
 brew "direnv"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@76"
+# .NET Core
+brew "dotnet"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Command-line fuzzy finder written in Go
@@ -33,6 +35,8 @@ brew "gping"
 brew "htop"
 # Interactive, file-level Time Machine-like tool for ZFS/btrfs
 brew "httm"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
 # Run and Test HTTP Requests with plain text and curl
 brew "hurl"
 # Simple terminal UI for git commands
@@ -45,14 +49,22 @@ brew "luarocks"
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Safe, concurrent, practical language
+brew "rust"
+# Rust toolchain installer
+brew "rustup"
 # Generate type safe Go from SQL
 brew "sqlc"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Granddaddy of HTML tools, with support for modern standards
 brew "tidy-html5"
+# Command-line client for WebSockets
+brew "websocat"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
 # Pluggable terminal workspace, with terminal multiplexer as the base feature
