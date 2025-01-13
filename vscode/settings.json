@@ -1,0 +1,150 @@
+{
+  "redhat.telemetry.enabled": false,
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "window.zoomLevel": 1.0,
+  "github.experimental.multipleAccounts": true,
+  "telemetry.telemetryLevel": "off",
+  "cursor.cpp.enablePartialAccepts": true,
+  "python.analysis.ignore": [
+    // "*"
+  ],
+  "projectManager.any.baseFolders": [
+    "~/projects/",
+  ],
+  "projectManager.any.maxDepthRecursion": 1,
+  "projectManager.sortList": "Recent",
+  "projectManager.removeCurrentProjectFromList": false,
+  "remote.extensionKind": {
+    "alefragnani.project-manager": [
+      "workspace"
+    ]
+  },
+  "githd.blameView.enabled": false,
+  "editor.smoothScrolling": true,
+  "editor.cursorSurroundingLines": 10,
+  "editor.minimap.enabled": true,
+  "editor.minimap.autohide": true,
+  "vscode-neovim.neovimExecutablePaths.linux": "/home/linuxbrew/.linuxbrew/bin/nvim",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1,
+    "vscodevim.vim": 1
+  },
+  "vscode-neovim.useWSL": true,
+  "numberedBookmarks.navigateThroughAllFiles": "replace",
+  "AREPL.telemetry": false,
+  "docker-explorer.enableTelemetry": false,
+  "code-runner.enableAppInsights": false,
+  "workbench.activityBar.orientation": "vertical",
+  // open json editor for settings
+  "workbench.settings.editor": "json",
+  // Change font
+  "editor.fontFamily": "JetbrainsMono Nerd Font",
+  "scm.inputFontFamily": "JetbrainsMono Nerd Font",
+  "terminal.integrated.fontFamily": "JetbrainsMono Nerd Font",
+  "chat.editor.fontFamily": "JetbrainsMono Nerd Font",
+  "debug.console.fontFamily": "JetbrainsMono Nerd Font",
+  "editor.codeLensFontFamily": "JetbrainsMono Nerd Font",
+  "notebook.output.fontFamily": "JetbrainsMono Nerd Font",
+  "markdown.preview.fontFamily": "JetbrainsMono Nerd Font",
+  "editor.inlayHints.fontFamily": "JetbrainsMono Nerd Font",
+  // Font size
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  // ui
+  "editor.minimap.enabled": true,
+  "editor.minimap.autohide": true,
+  "window.commandCenter": false,
+  "editor.scrollbar.vertical": "auto",
+  "window.titleBarStyle": "custom",
+  "editor.scrollbar.horizontal": "auto",
+  // APC
+  "apc.activityBar": {
+    "position": "bottom",
+    "hideSettings": true,
+    "size": 28
+  },
+  // "apc.electron": {
+  //   "titleBarStyle": "hiddenInset",
+  // },
+  "apc.font.family": "JetbrainsMono Nerd Font",
+  "apc.monospace.font.family": "JetbrainsMono Nerd Font",
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 28,
+    "fontSize": 12
+  },
+  // Cusom css
+  "apc.stylesheet": {
+    // ".sidebar > .composite": "height: 12px !important",
+    // ".title-label": "display: none !important",
+    // ".title-actions": "display: none !important",
+    // ".tabs-and-actions-container > .editor-actions": "display: none !important",
+    ".titlebar-center": "display: none !important",
+    // ".titlebar-right": "display: none !important",
+    // ".inline-tabs-placeholder": "display: none !important",
+    // ".split-view-view .visible": "background-color: #110f17 !important"
+  },
+  // Aura theme customisation
+  // "workbench.colorCustomizations": {
+  //   "[Aura Dark]": {
+  //     "editor.background": "#110f17",
+  //     "terminal.background": "#110f17",
+  //     "activityBar.background": "#110f17",
+  //     "statusBar.background": "#110f17",
+  //     "editorGroupHeader.tabsBackground": "#110f17",
+  //     "tab.inactiveBackground": "#110f17"
+  //   }
+  // },
+  // Misc
+  "workbench.startupEditor": "none",
+  // "editor.tabSize": 4,
+  "editor.linkedEditing": true,
+  "breadcrumbs.filePath": "on",
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  // Neovim
+  // "vscode-neovim.neovimInitVimPaths.linux": "/home/grim/.config/nvim/init.lua",
+  "editor.experimental.asyncTokenization": true,
+  "vscode-neovim.afterInitConfig": [
+    "set cmdheight=2"
+  ],
+  "git.openRepositoryInParentFolders": "never",
+  "find-it-faster.general.useTerminalInEditor": true,
+  "terminal.integrated.allowChords": false,
+  "cursor.general.enableShadowWorkspace": true,
+  "explorer.autoRevealExclude": {
+    "**/.venv": true
+  },
+  "search.exclude": {
+    "**/.venv": true
+  },
+  "terminal.external.linuxExec": "/usr/bin/zsh",
+  "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+  "find-it-faster.findWithinFiles.fuzzRipgrepQuery": true,
+  "python.terminal.activateEnvironment": false,
+  "workbench.colorTheme": "Kanagawa Dragon",
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "basedpyright.analysis.typeCheckingMode": "basic",
+  "basedpyright.analysis.diagnosticSeverityOverrides": {
+    "reportUnusedImport": "none",
+    "reportUnusedFunction": "none",
+    "reportUnusedVariable": "none",
+    // "reportGeneralTypeIssues": "none",
+    // "reportOptionalMemberAccess": "none",
+    // "reportOptionalSubscript": "none",
+    // "reportPrivateImportUsage": "none",
+  },
+  "editor.rulers": [
+    120,
+  ],
+  "httpyac.cookieJarEnabled": false,
+  "ruff.lineLength": 120,
+  "remote.autoForwardPortsSource": "hybrid",
+  "editor.cursorBlinking": "solid"
+}
