@@ -1,7 +1,7 @@
 # setup homebrew
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # add zsh completions installed by homebrew
-# fpath+=($(brew --prefix)/share/zsh/site-functions)
+fpath+=($(brew --prefix)/share/zsh/site-functions)
 
 # Start configuration added by Zim install {{{
 #
@@ -154,14 +154,13 @@ export PYENV_ROOT="$HOME/.pyenv"
 alias vim=nvim
 alias ls=lsd
 alias bat=batcat
-# alias gdu=gdu-go
+alias gdu=gdu-go
 
 # initialize additional tools
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 eval "$(pyenv init -)"
-# eval "$(fzf --zsh)"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fzf --zsh)"
 [ -f ~/.config/wezterm/wezterm.sh ] && source ~/.config/wezterm/wezterm.sh
 
 # User specific environment and startup programs
