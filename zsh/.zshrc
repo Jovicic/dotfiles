@@ -1,7 +1,8 @@
+AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
 # setup homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # add zsh completions installed by homebrew
-fpath+=($(brew --prefix)/share/zsh/site-functions)
+# fpath+=($(brew --prefix)/share/zsh/site-functions)
 
 # Start configuration added by Zim install {{{
 #
@@ -138,6 +139,7 @@ unset key
 
 # setup paths
 path+=($HOME/.local/bin)
+path+=(/opt/zig14)
 # path+=($HOME/apps/zig13)
 # path+=(/opt/nvim)
 export PATH
@@ -145,22 +147,23 @@ export PATH
 # setup env vars
 export EDITOR=nvim  # set standard editor
 export AUTOSWITCH_SILENT=1  # don't show python virtualenv switch messages
-export HOMEBREW_NO_ANALYTICS=1  # don't send analytics to homebrew
-export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# export HOMEBREW_NO_ANALYTICS=1  # don't send analytics to homebrew
+# export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 
 # setup aliases
 alias vim=nvim
 alias ls=lsd
-alias bat=batcat
-alias gdu=gdu-go
+# alias bat=batcat
+# alias gdu=gdu-go
 
 # initialize additional tools
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 eval "$(fzf --zsh)"
+eval "$($HOME/.local/bin/mise activate zsh)"
 [ -f ~/.config/wezterm/wezterm.sh ] && source ~/.config/wezterm/wezterm.sh
 
 # User specific environment and startup programs

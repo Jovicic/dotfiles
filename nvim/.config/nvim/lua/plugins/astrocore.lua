@@ -11,13 +11,14 @@ return {
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
-        signcolumn = "yes:3", -- sets vim.opt.signcolumn
-        numberwidth = 5, --width of the number column
+        signcolumn = "yes:2", -- sets vim.opt.signcolumn
+        -- numberwidth = 4, --width of the number column
         scrolloff = 10, -- number of lines to keep above and below the cursor
         foldcolumn = "0", -- disable foldcolumn
         foldenable = false, -- disable folding
         showtabline = 0, -- disable the tabline display
         updatetime = 50, -- decrease update time
+        relativenumber = false,
       },
       g = {
         python3_host_prog = (vim.uv.os_uname().sysname == "Linux" and "/usr/bin/python3" or nil),

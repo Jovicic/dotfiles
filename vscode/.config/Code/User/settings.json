@@ -26,12 +26,12 @@
   "editor.cursorSurroundingLines": 10,
   "editor.minimap.enabled": true,
   "editor.minimap.autohide": true,
-  "vscode-neovim.neovimExecutablePaths.linux": "/home/linuxbrew/.linuxbrew/bin/nvim",
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1,
-    "vscodevim.vim": 1
+    // "vscodevim.vim": 1
   },
-  "vscode-neovim.useWSL": true,
+  // "vscode-neovim.useWSL": true,
   "numberedBookmarks.navigateThroughAllFiles": "replace",
   "AREPL.telemetry": false,
   "docker-explorer.enableTelemetry": false,
@@ -124,11 +124,11 @@
   "search.exclude": {
     "**/.venv": true
   },
-  "terminal.external.linuxExec": "/usr/bin/zsh",
-  "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+  // "terminal.external.linuxExec": "/bin/zsh",
+  // "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
   "find-it-faster.findWithinFiles.fuzzRipgrepQuery": true,
   "python.terminal.activateEnvironment": false,
-  "workbench.colorTheme": "Kanagawa Dragon",
+  "workbench.colorTheme": "Monokai Pro",
   "editor.inlayHints.enabled": "offUnlessPressed",
   "basedpyright.analysis.typeCheckingMode": "basic",
   "basedpyright.analysis.diagnosticSeverityOverrides": {
@@ -143,8 +143,50 @@
   "editor.rulers": [
     120,
   ],
-  "httpyac.cookieJarEnabled": false,
+  "httpyac.cookieJarEnabled": true,
   "ruff.lineLength": 120,
   "remote.autoForwardPortsSource": "hybrid",
-  "editor.cursorBlinking": "solid"
+  "editor.cursorBlinking": "solid",
+  "github.copilot.chat.search.semanticTextResults": true,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "github.copilot.chat.edits.temporalContext.enabled": true,
+  "github.copilot.chat.experimental.codeFeedback.enabled": true,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.edits.codesearch.enabled": true,
+  "python.analysis.aiCodeActions": {
+    "implementAbstractClasses": true,
+  },
+  "gitlens.showWelcomeOnInstall": false,
+  "gitlens.showWhatsNewAfterUpgrades": false,
+  "gitlens.plusFeatures.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.currentLine.pullRequests.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.statusBar.pullRequests.enabled": false,
+  "gitlens.hovers.avatars": false,
+  "gitlens.blame.avatars": false,
+  "git.suggestSmartCommit": false,
+  "workbench.editor.showTabs": "single",
+  "zenMode.showTabs": "single",
+  "window.density.editorTabHeight": "compact",
+  "keyboard.dispatch": "keyCode",
+  "editor.experimental.preferTreeSitter": [
+      "typescript"
+  ],
+  "editor.experimentalGpuAcceleration": "off",
+  "workbench.commandPalette.experimental.suggestCommands": true,
+  "chat.agent.maxRequests": 25,
+  "github.copilot.chat.completionContext.typescript.mode": "on",
+  "debugpy.showPythonInlineValues": true,
+  "gitlens.ai.model": "vscode",
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "github.copilot.chat.generateTests.codeLens": true,
+  "gitlens.ai.modelOptions.temperature": 0.1,
+  "python.locator": "native",
+  "python.REPL.sendToNativeREPL": true,
+  "visualjj.showSourceControlColocated": true,
+  "workbench.activityBar.location": "top",
+  "window.customTitleBarVisibility": "auto",
+  "update.mode": "none"
 }
