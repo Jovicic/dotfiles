@@ -1,8 +1,6 @@
 {
   "redhat.telemetry.enabled": false,
-  "editor.fontFamily": "'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 14,
   "window.zoomLevel": 1.0,
   "github.experimental.multipleAccounts": true,
   "telemetry.telemetryLevel": "off",
@@ -24,8 +22,6 @@
   "githd.blameView.enabled": false,
   "editor.smoothScrolling": true,
   "editor.cursorSurroundingLines": 10,
-  "editor.minimap.enabled": true,
-  "editor.minimap.autohide": true,
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1,
@@ -36,19 +32,19 @@
   "AREPL.telemetry": false,
   "docker-explorer.enableTelemetry": false,
   "code-runner.enableAppInsights": false,
-  "workbench.activityBar.orientation": "vertical",
+  // "workbench.activityBar.orientation": "vertical",
   // open json editor for settings
   "workbench.settings.editor": "json",
   // Change font
   "editor.fontFamily": "JetbrainsMono Nerd Font",
-  "scm.inputFontFamily": "JetbrainsMono Nerd Font",
-  "terminal.integrated.fontFamily": "JetbrainsMono Nerd Font",
-  "chat.editor.fontFamily": "JetbrainsMono Nerd Font",
-  "debug.console.fontFamily": "JetbrainsMono Nerd Font",
-  "editor.codeLensFontFamily": "JetbrainsMono Nerd Font",
-  "notebook.output.fontFamily": "JetbrainsMono Nerd Font",
-  "markdown.preview.fontFamily": "JetbrainsMono Nerd Font",
-  "editor.inlayHints.fontFamily": "JetbrainsMono Nerd Font",
+  // "scm.inputFontFamily": "JetbrainsMono Nerd Font",
+  // "terminal.integrated.fontFamily": "JetbrainsMono Nerd Font",
+  // "chat.editor.fontFamily": "JetbrainsMono Nerd Font",
+  // "debug.console.fontFamily": "JetbrainsMono Nerd Font",
+  // "editor.codeLensFontFamily": "JetbrainsMono Nerd Font",
+  // "notebook.output.fontFamily": "JetbrainsMono Nerd Font",
+  // "markdown.preview.fontFamily": "JetbrainsMono Nerd Font",
+  // "editor.inlayHints.fontFamily": "JetbrainsMono Nerd Font",
   // Font size
   "editor.fontSize": 14,
   "terminal.integrated.fontSize": 14,
@@ -186,7 +182,10 @@
   "python.locator": "native",
   "python.REPL.sendToNativeREPL": true,
   "visualjj.showSourceControlColocated": true,
-  "workbench.activityBar.location": "top",
   "window.customTitleBarVisibility": "auto",
-  "update.mode": "none"
+  "update.mode": "none",
+  "chat.experimental.statusIndicator.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "workbench.activityBar.location": "top",
+  "github.copilot.selectedCompletionModel": "gpt-4o-copilot"
 }
