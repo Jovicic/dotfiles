@@ -79,8 +79,8 @@ vnoremap <Tab> >gv
 " Jump around with easymotion
 map s <Plug>(easymotion-s)
 
-map <C-S-P> <action>(SearchEverywhere)
-map <C-p> <action>(GotoFile)
+" map <C-S-P> <action>(SearchEverywhere)
+" map <C-p> <action>(GotoFile)
 
 nnoremap <A-h> <C-w>h
 nnoremap <A-l> <C-w>l
@@ -100,7 +100,7 @@ map <leader>c <action>(CloseEditor)
 
 map <leader>e :NERDTreeToggle<CR>
 
-map <leader>. <action>(ShowIntentionActions)
+" map <C+.> <action>(ShowIntentionActions)
 
 " File navigation
 map <leader>ff <action>(GotoFile)
