@@ -22,7 +22,7 @@ set showcmd
 set visualbell
 set clipboard=unnamedplus
 
-set which-key
+"set which-key
 set NERDTree
 set highlightedyank
 set surround
@@ -38,7 +38,6 @@ set argtextobj
 set vim-paragraph-motion
 
 
-set which-key
 let g:WhichKey_ShowVimActions = "true"
 let g:WhichKey_FontSize = 14
 let g:WhichKey_CommandColor = "#41ead4"
@@ -113,3 +112,6 @@ map <leader>fs <action>(NewScratchFile)
 " Go to code
 nmap <leader>gd <Action>(GotoDeclaration)
 nmap <leader>gr <Action>(ShowUsages)
+
+" Sweep AI Tab completion mapping
+map <Tab> :action dev.sweep.assistant.autocomplete.edit.AcceptEditCompletionAction<CR>

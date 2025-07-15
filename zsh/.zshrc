@@ -137,13 +137,6 @@ unset key
 # Created by user for 5.9
 # setup your config below
 
-# setup paths
-path+=($HOME/.local/bin)
-path+=(/opt/zig14)
-# path+=($HOME/apps/zig13)
-# path+=(/opt/nvim)
-export PATH
-
 # setup env vars
 export EDITOR=nvim  # set standard editor
 export AUTOSWITCH_SILENT=1  # don't show python virtualenv switch messages
@@ -151,21 +144,38 @@ export AUTOSWITCH_SILENT=1  # don't show python virtualenv switch messages
 # export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
 # export PYENV_ROOT="$HOME/.pyenv"
 # [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+export BUN_INSTALL="$HOME/.bun"
+
+path+=($HOME/.local/bin)
+# setup paths
+path+=(/opt/zig14)
+# path+=($HOME/apps/zig13)
+# path+=(/opt/nvim)
+path+=($BUN_INSTALL/bin)
+export PATH
 
 # setup aliases
 alias vim=nvim
 alias ls=lsd
+alias claude="/home/grim/.claude/local/claude"
 # alias bat=batcat
 # alias gdu=gdu-go
 
 # initialize additional tools
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 # eval "$(pyenv init -)"
 eval "$(fzf --zsh)"
 eval "$($HOME/.local/bin/mise activate zsh)"
-[ -f ~/.config/wezterm/wezterm.sh ] && source ~/.config/wezterm/wezterm.sh
+# [ -f ~/.config/wezterm/wezterm.sh ] && source ~/.config/wezterm/wezterm.sh
 
-# User specific environment and startup programs
 # . "$HOME/.cargo/env"
+# User specific environment and startup programs
 
+# wsl stuff
+if [ -f $HOME/.zsh_gnome_desktop ]; then
+  . $HOME/.zsh_gnome_desktop
+fi
+
+# unset WSL_DISTRO_NAME
+export $(dbus-launch)

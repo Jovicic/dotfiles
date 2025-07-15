@@ -14,7 +14,6 @@ return {
     -- colorscheme = "tokyonight-storm",
     colorscheme = "kanagawa-wave",
     -- colorscheme = "tokyonight-storm",
-    colorscheme = "kanagawa-wave",
     -- colorscheme = "catppuccin-macchiato",
   },
 }
