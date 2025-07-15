@@ -173,9 +173,9 @@ eval "$($HOME/.local/bin/mise activate zsh)"
 # User specific environment and startup programs
 
 # wsl stuff
-if [ -f $HOME/.zsh_gnome_desktop ]; then
-  . $HOME/.zsh_gnome_desktop
-fi
-
+# if [ -f $HOME/.zsh_gnome_desktop ]; then
+#   . $HOME/.zsh_gnome_desktop
+# fi
 # unset WSL_DISTRO_NAME
-export $(dbus-launch)
+
+# export $(dbus-launch)
