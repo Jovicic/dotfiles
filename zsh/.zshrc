@@ -157,7 +157,6 @@ export PATH
 # setup aliases
 alias vim=nvim
 alias ls=lsd
-alias claude="/home/grim/.claude/local/claude"
 # alias bat=batcat
 # alias gdu=gdu-go
 
@@ -165,8 +164,9 @@ alias claude="/home/grim/.claude/local/claude"
 # eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 # eval "$(pyenv init -)"
-eval "$(fzf --zsh)"
+# eval "$(fzf --zsh)"
 eval "$($HOME/.local/bin/mise activate zsh)"
+eval "$(atuin init zsh)"
 # [ -f ~/.config/wezterm/wezterm.sh ] && source ~/.config/wezterm/wezterm.sh
 
 # . "$HOME/.cargo/env"
