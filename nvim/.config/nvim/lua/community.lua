@@ -28,7 +28,7 @@ return {
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.completion.copilot-lua" },
   -- { import = "astrocommunity.completion.cmp-cmdline" },
-  { import = "astrocommunity.completion.codeium-vim" },
+  -- { import = "astrocommunity.completion.codeium-vim" },
   -- { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.completion.blink-cmp" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
