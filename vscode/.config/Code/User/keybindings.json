@@ -576,5 +576,9 @@
     "key": "shift+alt+f",
     "command": "-search.action.restrictSearchToFolder",
     "when": "folderMatchWithResourceFocus && searchViewletVisible"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-composer.startComposerPrompt"
   }
 ]

@@ -12,5 +12,8 @@ return {
     features = {
       inlay_hints = true, -- enable/disable inlay hints on start
     },
+    formatting = {
+      format_on_save = false,
+    },
   },
 }

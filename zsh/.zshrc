@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/nebo/.zsh/completions:"* ]]; then export FPATH="/home/nebo/.zsh/completions:$FPATH"; fi
 AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
 # setup homebrew
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -138,15 +140,18 @@ unset key
 # setup your config below
 
 # setup paths
-path+=($HOME/.local/bin)
+export BUN_INSTALL="$HOME/.bun"
+# path+=($HOME/.local/bin)
 path+=(/opt/zig14)
 # path+=($HOME/apps/zig13)
 # path+=(/opt/nvim)
+path+=($BUN_INSTALL/bin)
 export PATH
 
 # setup env vars
 export EDITOR=nvim  # set standard editor
 export AUTOSWITCH_SILENT=1  # don't show python virtualenv switch messages
+export UV_PYTHON_PREFERENCE=only-managed
 # export HOMEBREW_NO_ANALYTICS=1  # don't send analytics to homebrew
 # export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
 # export PYENV_ROOT="$HOME/.pyenv"
@@ -165,7 +170,21 @@ eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 eval "$($HOME/.local/bin/mise activate zsh)"
 [ -f ~/.config/wezterm/wezterm.sh ] && source ~/.config/wezterm/wezterm.sh
+[ -s "/home/nebo/.bun/_bun" ] && source "/home/nebo/.bun/_bun"
 
 # User specific environment and startup programs
 # . "$HOME/.cargo/env"
 
+eval "$(atuin init zsh)"
+
+. "/home/nebo/.deno/env"
+
+# Source work .zshrc if it exists
+if [ -f ~/.zshrc_work ]; then
+  source ~/.zshrc_work
+fi
+
+# Source personal .zshrc if it exists
+if [ -f ~/.zshrc_personal ]; then
+  source ~/.zshrc_personal
+fi
