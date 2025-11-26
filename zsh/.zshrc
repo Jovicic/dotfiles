@@ -139,15 +139,6 @@ unset key
 # Created by user for 5.9
 # setup your config below
 
-# setup paths
-export BUN_INSTALL="$HOME/.bun"
-# path+=($HOME/.local/bin)
-path+=(/opt/zig14)
-# path+=($HOME/apps/zig13)
-# path+=(/opt/nvim)
-path+=($BUN_INSTALL/bin)
-export PATH
-
 # setup env vars
 export EDITOR=nvim  # set standard editor
 export AUTOSWITCH_SILENT=1  # don't show python virtualenv switch messages
@@ -155,6 +146,16 @@ export AUTOSWITCH_SILENT=1  # don't show python virtualenv switch messages
 # export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
 # export PYENV_ROOT="$HOME/.pyenv"
 # [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+export BUN_INSTALL="$HOME/.bun"
+export UV_MANAGED_PYTHON=true
+
+# setup paths
+path+=($HOME/.local/bin)
+path+=(/opt/zig14)
+# path+=($HOME/apps/zig13)
+# path+=(/opt/nvim)
+path+=($BUN_INSTALL/bin)
+export PATH
 
 # setup aliases
 alias vim=nvim
@@ -163,13 +164,11 @@ alias ls=lsd
 # alias gdu=gdu-go
 
 # initialize additional tools
-# eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
-# eval "$(pyenv init -)"
 # eval "$(fzf --zsh)"
 eval "$($HOME/.local/bin/mise activate zsh)"
-[ -f ~/.config/wezterm/wezterm.sh ] && source ~/.config/wezterm/wezterm.sh
-[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
+eval "$(atuin init zsh)"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # User specific environment and startup programs
 # . "$HOME/.cargo/env"
@@ -187,3 +186,16 @@ fi
 if [ -f ~/.zshrc_personal ]; then
   source ~/.zshrc_personal
 fi
+# export $(dbus-launch)
+
+alias claude="~/.claude/local/claude"
+
+# Load optional personal/work configurations
+# These files are not tracked in git and contain sensitive/machine-specific settings
+[[ -f ~/.zshpersonal ]] && source ~/.zshpersonal
+[[ -f ~/.zshwork ]] && source ~/.zshwork
+
+
+# bun completions
+[ -s "/home/nebo/.bun/_bun" ] && source "/home/nebo/.bun/_bun"
+. "/home/nebo/.deno/env"
