@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":~/.zsh/completions:"* ]]; then export FPATH="~/.zsh/completions:$FPATH"; fi
 AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
 # setup homebrew
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -137,6 +139,15 @@ unset key
 # Created by user for 5.9
 # setup your config below
 
+# setup paths
+export BUN_INSTALL="$HOME/.bun"
+# path+=($HOME/.local/bin)
+path+=(/opt/zig14)
+# path+=($HOME/apps/zig13)
+# path+=(/opt/nvim)
+path+=($BUN_INSTALL/bin)
+export PATH
+
 # setup env vars
 export EDITOR=nvim  # set standard editor
 export AUTOSWITCH_SILENT=1  # don't show python virtualenv switch messages
@@ -144,15 +155,6 @@ export AUTOSWITCH_SILENT=1  # don't show python virtualenv switch messages
 # export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
 # export PYENV_ROOT="$HOME/.pyenv"
 # [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-export BUN_INSTALL="$HOME/.bun"
-
-path+=($HOME/.local/bin)
-# setup paths
-path+=(/opt/zig14)
-# path+=($HOME/apps/zig13)
-# path+=(/opt/nvim)
-path+=($BUN_INSTALL/bin)
-export PATH
 
 # setup aliases
 alias vim=nvim
@@ -166,16 +168,22 @@ eval "$(zoxide init zsh)"
 # eval "$(pyenv init -)"
 # eval "$(fzf --zsh)"
 eval "$($HOME/.local/bin/mise activate zsh)"
-eval "$(atuin init zsh)"
-# [ -f ~/.config/wezterm/wezterm.sh ] && source ~/.config/wezterm/wezterm.sh
+[ -f ~/.config/wezterm/wezterm.sh ] && source ~/.config/wezterm/wezterm.sh
+[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
 
-# . "$HOME/.cargo/env"
 # User specific environment and startup programs
+# . "$HOME/.cargo/env"
 
-# wsl stuff
-# if [ -f $HOME/.zsh_gnome_desktop ]; then
-#   . $HOME/.zsh_gnome_desktop
-# fi
-# unset WSL_DISTRO_NAME
+eval "$(atuin init zsh)"
 
-# export $(dbus-launch)
+. "~/.deno/env"
+
+# Source work .zshrc if it exists
+if [ -f ~/.zshrc_work ]; then
+  source ~/.zshrc_work
+fi
+
+# Source personal .zshrc if it exists
+if [ -f ~/.zshrc_personal ]; then
+  source ~/.zshrc_personal
+fi
