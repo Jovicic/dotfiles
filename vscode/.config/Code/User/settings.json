@@ -1,50 +1,28 @@
 {
   "redhat.telemetry.enabled": false,
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', Menlo, Monaco, Consolas, 'Droid Sans Mono', 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 1.0,
   "github.experimental.multipleAccounts": true,
   "telemetry.telemetryLevel": "off",
-  "cursor.cpp.enablePartialAccepts": true,
   "python.analysis.ignore": [
     // "*"
   ],
-  "projectManager.any.baseFolders": [
-    "~/projects/",
-  ],
-  "projectManager.any.maxDepthRecursion": 1,
-  "projectManager.sortList": "Recent",
-  "projectManager.removeCurrentProjectFromList": false,
   "remote.extensionKind": {
     "alefragnani.project-manager": [
       "workspace"
     ]
   },
-  "githd.blameView.enabled": false,
   "editor.smoothScrolling": true,
   "editor.cursorSurroundingLines": 10,
-  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "vscode-neovim.neovimExecutablePaths.linux": "nvim",
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1,
-    // "vscodevim.vim": 1
+    "asvetliakov.vscode-neovim": 1
   },
-  // "vscode-neovim.useWSL": true,
-  "numberedBookmarks.navigateThroughAllFiles": "replace",
-  "AREPL.telemetry": false,
-  "docker-explorer.enableTelemetry": false,
-  "code-runner.enableAppInsights": false,
-  // "workbench.activityBar.orientation": "vertical",
+  "vscode-neovim.useWSL": true,
+  "workbench.activityBar.orientation": "vertical",
   // open json editor for settings
   "workbench.settings.editor": "json",
-  // Change font
-  "editor.fontFamily": "JetbrainsMono Nerd Font",
-  // "scm.inputFontFamily": "JetbrainsMono Nerd Font",
-  // "terminal.integrated.fontFamily": "JetbrainsMono Nerd Font",
-  // "chat.editor.fontFamily": "JetbrainsMono Nerd Font",
-  // "debug.console.fontFamily": "JetbrainsMono Nerd Font",
-  // "editor.codeLensFontFamily": "JetbrainsMono Nerd Font",
-  // "notebook.output.fontFamily": "JetbrainsMono Nerd Font",
-  // "markdown.preview.fontFamily": "JetbrainsMono Nerd Font",
-  // "editor.inlayHints.fontFamily": "JetbrainsMono Nerd Font",
   // Font size
   "editor.fontSize": 14,
   "terminal.integrated.fontSize": 14,
@@ -53,49 +31,8 @@
   "editor.minimap.autohide": "mouseover",
   "window.commandCenter": false,
   "editor.scrollbar.vertical": "auto",
-  "window.titleBarStyle": "custom",
   "editor.scrollbar.horizontal": "auto",
-  // APC
-  "apc.activityBar": {
-    "position": "bottom",
-    "hideSettings": true,
-    "size": 28
-  },
-  // "apc.electron": {
-  //   "titleBarStyle": "hiddenInset",
-  // },
-  "apc.font.family": "JetbrainsMono Nerd Font",
-  "apc.monospace.font.family": "JetbrainsMono Nerd Font",
-  "apc.statusBar": {
-    "position": "editor-bottom",
-    "height": 28,
-    "fontSize": 12
-  },
-  // Cusom css
-  "apc.stylesheet": {
-    // ".sidebar > .composite": "height: 12px !important",
-    // ".title-label": "display: none !important",
-    // ".title-actions": "display: none !important",
-    // ".tabs-and-actions-container > .editor-actions": "display: none !important",
-    ".titlebar-center": "display: none !important",
-    // ".titlebar-right": "display: none !important",
-    // ".inline-tabs-placeholder": "display: none !important",
-    // ".split-view-view .visible": "background-color: #110f17 !important"
-  },
-  // Aura theme customisation
-  // "workbench.colorCustomizations": {
-  //   "[Aura Dark]": {
-  //     "editor.background": "#110f17",
-  //     "terminal.background": "#110f17",
-  //     "activityBar.background": "#110f17",
-  //     "statusBar.background": "#110f17",
-  //     "editorGroupHeader.tabsBackground": "#110f17",
-  //     "tab.inactiveBackground": "#110f17"
-  //   }
-  // },
-  // Misc
   "workbench.startupEditor": "none",
-  // "editor.tabSize": 4,
   "editor.linkedEditing": true,
   "breadcrumbs.filePath": "on",
   "files.trimTrailingWhitespace": true,
@@ -104,14 +41,11 @@
   },
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
-  // Neovim
-  // "vscode-neovim.neovimInitVimPaths.linux": "/home/grim/.config/nvim/init.lua",
   "editor.experimental.asyncTokenization": true,
   "vscode-neovim.afterInitConfig": [
     "set cmdheight=2"
   ],
   "git.openRepositoryInParentFolders": "never",
-  "find-it-faster.general.useTerminalInEditor": true,
   "terminal.integrated.allowChords": false,
   "cursor.general.enableShadowWorkspace": true,
   "explorer.autoRevealExclude": {
@@ -120,38 +54,27 @@
   "search.exclude": {
     "**/.venv": true
   },
-  // "terminal.external.linuxExec": "/bin/zsh",
-  // "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-  "find-it-faster.findWithinFiles.fuzzRipgrepQuery": true,
+  "terminal.external.linuxExec": "/bin/zsh",
+  "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
   "python.terminal.activateEnvironment": false,
+  "github.copilot.chat.generateTests.codeLens": true,
   "editor.inlayHints.enabled": "offUnlessPressed",
-  "basedpyright.analysis.typeCheckingMode": "basic",
-  "basedpyright.analysis.diagnosticSeverityOverrides": {
-    "reportUnusedImport": "none",
-    "reportUnusedFunction": "none",
-    "reportUnusedVariable": "none",
-    // "reportGeneralTypeIssues": "none",
-    // "reportOptionalMemberAccess": "none",
-    // "reportOptionalSubscript": "none",
-    // "reportPrivateImportUsage": "none",
-  },
+  "chat.agent.enabled": true,
   "editor.rulers": [
-    120,
+    120
   ],
+  "github.copilot.chat.editor.temporalContext.enabled": true,
   "httpyac.cookieJarEnabled": true,
   "ruff.lineLength": 120,
   "remote.autoForwardPortsSource": "hybrid",
   "editor.cursorBlinking": "solid",
-  "github.copilot.chat.search.semanticTextResults": true,
   "github.copilot.chat.editor.temporalContext.enabled": true,
   "github.copilot.chat.edits.temporalContext.enabled": true,
-  "github.copilot.chat.experimental.codeFeedback.enabled": true,
   "github.copilot.chat.languageContext.typescript.enabled": true,
   "github.copilot.nextEditSuggestions.enabled": true,
   "python.analysis.aiCodeActions": {
-    "implementAbstractClasses": true,
+    "implementAbstractClasses": true
   },
-  "gitlens.showWelcomeOnInstall": false,
   "gitlens.showWhatsNewAfterUpgrades": false,
   "gitlens.plusFeatures.enabled": false,
   "gitlens.currentLine.enabled": false,
@@ -164,82 +87,35 @@
   "workbench.editor.showTabs": "single",
   "zenMode.showTabs": "single",
   "window.density.editorTabHeight": "compact",
-  "keyboard.dispatch": "keyCode",
-  "editor.experimental.preferTreeSitter": [
-    "typescript"
-  ],
-  "editor.experimentalGpuAcceleration": "off",
   "workbench.commandPalette.experimental.suggestCommands": true,
   "chat.agent.maxRequests": 50,
-  "github.copilot.chat.completionContext.typescript.mode": "on",
   "debugpy.showPythonInlineValues": true,
   "gitlens.ai.model": "vscode",
   "github.copilot.chat.codeGeneration.useInstructionFiles": true,
   "github.copilot.chat.generateTests.codeLens": true,
   "gitlens.ai.modelOptions.temperature": 0.1,
   "python.REPL.sendToNativeREPL": true,
-  "visualjj.showSourceControlColocated": true,
   "window.customTitleBarVisibility": "auto",
-  // "update.mode": "none",
-  "chat.experimental.statusIndicator.enabled": true,
   "github.copilot.chat.codesearch.enabled": true,
-  "ruff.importStrategy": "useBundled",
-  "excalidraw.theme": "dark",
   "[python]": {
     "editor.formatOnSave": false,
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  // "remote.defaultExtensionsIfInstalledLocally": [
-  //   "GitHub.copilot",
-  //   "GitHub.copilot-chat",
-  //   "GitHub.vscode-pull-request-github"
-  // ],
   "update.releaseTrack": "prerelease",
   "cursorpyright.analysis.ignore": [],
-  "editor.experimental.preferTreeSitter.typescript": true,
-  "editor.experimental.preferTreeSitter.regex": true,
-  "editor.experimental.preferTreeSitter.ini": true,
-  "editor.experimental.preferTreeSitter.css": true,
   "workbench.settings.showAISearchToggle": true,
   "telemetry.editStats.enabled": false,
-  "github.copilot.chat.agent.thinkingTool": true,
   "github.copilot.chat.languageContext.inline.typescript.enabled": true,
   "github.copilot.chat.languageContext.fix.typescript.enabled": true,
   "python.analysis.enableTroubleshootMissingImports": true,
-  "dataWrangler.experiments.copilot.enabled": true,
-  "dataWrangler.outputRenderer.enabled": true,
-  "dataWrangler.outputRenderer.enabledTypes": {
-    "polars.dataframe.frame.DataFrame": true,
-    "polars.series.series.Series": true,
-    "builtins.dict": true,
-    "builtins.list": true,
-    "numpy.ndarray": true
-  },
-  "dataWrangler.experiments.autoDetectCsvDelimiter": true,
-  "python.analysis.addHoverSummaries": true,
-  "jupyter.executionAnalysis.enabled": true,
   "playwright.showTrace": false,
   "playwright.reuseBrowser": true,
   "python.analysis.typeCheckingMode": "basic",
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "terminal.integrated.profiles.linux": {
-    "zsh": {
-      "path": "zsh",
-      "args": [
-        "-c",
-        "exec zsh --login"
-      ],
-      "overrideName": true
-    }
-  },
   "editor.aiStats.enabled": true,
   "github.copilot.chat.scopeSelection": true,
-  "github.copilot.chat.newWorkspace.useContext7": true,
-  "atlascode.bitbucket.enabled": false,
-  "atlascode.jira.hover.enabled": true,
   "chat.agentSessionsViewLocation": "view",
   "chat.tools.terminal.autoApprove": {
-
     "rm": false,
     "rmdir": false,
     "del": false,
@@ -256,7 +132,6 @@
   "accessibility.openChatEditedFiles": false,
   "inlineChat.notebookAgent": true,
   "inlineChat.enableV2": true,
-  "githubPullRequests.codingAgent.uiIntegration": true,
   "cursor.composer.shouldAllowCustomModes": true,
   "[dockercompose]": {
     "editor.insertSpaces": true,
@@ -273,19 +148,6 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "chat.edits2.enabled": true,
-  "atlascode.bitbucket.contextMenus.enabled": false,
-  "atlascode.bitbucket.explorer.enabled": false,
-  "atlascode.bitbucket.explorer.nestFilesEnabled": false,
-  "atlascode.bitbucket.explorer.notifications.pullRequestCreated": false,
-  "atlascode.bitbucket.explorer.refreshInterval": 0,
-  "atlascode.bitbucket.explorer.relatedJiraIssues.enabled": false,
-  "atlascode.bitbucket.explorer.showReviewedPullRequests": false,
-  "atlascode.bitbucket.pipelines.explorerEnabled": false,
-  "atlascode.bitbucket.pipelines.monitorEnabled": false,
-  "atlascode.bitbucket.statusbar.showUser": false,
-  "atlascode.bitbucket.statusbar.showProduct": false,
-  "atlascode.bitbucket.statusbar.showLogin": false,
-  "atlascode.bitbucket.statusbar.enabled": false,
   "gitlens.ai.vscode.model": "copilot:gpt-5",
   "gitlens.views.scm.grouped.views": {
     "commits": true,
@@ -300,6 +162,13 @@
     "searchAndCompare": true,
     "launchpad": false
   },
-  "githubPullRequests.pullBranch": "never",
   "chat.mcp.gallery.enabled": true,
+  "vite.autoStart": false,
+  "github.copilot.chat.useResponsesApi": true,
+  "github.copilot.chat.alternateGptPrompt.enabled": true,
+  "git.allowForcePush": true,
+  "python.analysis.autoImportCompletions": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
