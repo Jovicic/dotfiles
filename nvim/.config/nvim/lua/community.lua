@@ -27,9 +27,6 @@ return {
   { import = "astrocommunity.comment.ts-comments-nvim" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.completion.copilot-lua" },
-  -- { import = "astrocommunity.completion.cmp-cmdline" },
-  -- { import = "astrocommunity.completion.codeium-vim" },
-  -- { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.completion.blink-cmp" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.diagnostics.tiny-inline-diagnostic-nvim" },
@@ -55,5 +52,4 @@ return {
   { import = "astrocommunity.recipes.auto-session-restore" },
   { import = "astrocommunity.recipes.neovide" },
   { import = "astrocommunity.recipes.vscode" },
-  { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 }
