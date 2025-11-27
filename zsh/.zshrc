@@ -1,11 +1,3 @@
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":~/.zsh/completions:"* ]]; then export FPATH="~/.zsh/completions:$FPATH"; fi
-AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
-# setup homebrew
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# add zsh completions installed by homebrew
-# fpath+=($(brew --prefix)/share/zsh/site-functions)
-
 # Start configuration added by Zim install {{{
 #
 # User configuration sourced by interactive shells
@@ -21,6 +13,8 @@ AUTOSWITCH_DEFAULT_PYTHON="/usr/bin/python3"
 
 # Remove older command from the history if a duplicate is to be added.
 setopt HIST_IGNORE_ALL_DUPS
+HISTSIZE=10000
+SAVEHIST=10000
 
 #
 # Input/output
@@ -37,6 +31,9 @@ bindkey -e
 
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
+
+# Prevent accidental file overwrites with >
+setopt NO_CLOBBER
 
 # -----------------
 # Zim configuration
@@ -61,7 +58,7 @@ zstyle ':zim:zmodule' use 'degit'
 #
 
 # Append `../` to your input for each `.` you type after an initial `..`
-#zstyle ':zim:input' double-dot-expand yes
+zstyle ':zim:input' double-dot-expand yes
 
 #
 # termtitle
@@ -141,20 +138,11 @@ unset key
 
 # setup env vars
 export EDITOR=nvim  # set standard editor
-export AUTOSWITCH_SILENT=1  # don't show python virtualenv switch messages
-# export HOMEBREW_NO_ANALYTICS=1  # don't send analytics to homebrew
-# export DOTNET_ROOT="$(brew --prefix)/opt/dotnet/libexec"
-# export PYENV_ROOT="$HOME/.pyenv"
-# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-export BUN_INSTALL="$HOME/.bun"
 export UV_MANAGED_PYTHON=true
 
 # setup paths
 path+=($HOME/.local/bin)
-path+=(/opt/zig14)
-# path+=($HOME/apps/zig13)
 # path+=(/opt/nvim)
-path+=($BUN_INSTALL/bin)
 export PATH
 
 # setup aliases
@@ -167,35 +155,14 @@ alias ls=lsd
 eval "$(zoxide init zsh)"
 # eval "$(fzf --zsh)"
 eval "$($HOME/.local/bin/mise activate zsh)"
-eval "$(atuin init zsh)"
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+eval "$($HOME/.local/bin/mise completion zsh)"
 
 # User specific environment and startup programs
 # . "$HOME/.cargo/env"
 
 eval "$(atuin init zsh)"
 
-. "~/.deno/env"
-
-# Source work .zshrc if it exists
-if [ -f ~/.zshrc_work ]; then
-  source ~/.zshrc_work
-fi
-
-# Source personal .zshrc if it exists
-if [ -f ~/.zshrc_personal ]; then
-  source ~/.zshrc_personal
-fi
-# export $(dbus-launch)
-
-alias claude="~/.claude/local/claude"
-
 # Load optional personal/work configurations
 # These files are not tracked in git and contain sensitive/machine-specific settings
-[[ -f ~/.zshpersonal ]] && source ~/.zshpersonal
-[[ -f ~/.zshwork ]] && source ~/.zshwork
+[[ -f ~/.zshrc_extra ]] && source ~/.zshrc_extra
 
-
-# bun completions
-[ -s "/home/nebo/.bun/_bun" ] && source "/home/nebo/.bun/_bun"
-. "/home/nebo/.deno/env"
