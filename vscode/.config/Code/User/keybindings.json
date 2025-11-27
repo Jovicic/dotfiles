@@ -50,26 +50,6 @@
     "command": "workbench.action.quickOpenNavigateNext",
     "when": "inQuickOpen"
   },
-  // {
-  //   "key": "tab",
-  //   "command": "selectNextSuggestion",
-  //   "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  // },
-  // {
-  //   "key": "tab",
-  //   "command": "workbench.action.quickOpenNavigateNext",
-  //   "when": "inQuickOpen"
-  // },
-  // {
-  //   "key": "shift+tab",
-  //   "command": "selectPrevSuggestion",
-  //   "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-  // },
-  // {
-  //   "key": "shift+tab",
-  //   "command": "workbench.action.quickOpenNavigatePrevious",
-  //   "when": "inQuickOpen"
-  // },
   {
     "key": "ctrl+k",
     "command": "workbench.action.quickOpenNavigatePrevious",
@@ -304,50 +284,6 @@
     "key": "ctrl+l",
     "command": "-aichat.newchataction"
   },
-  //experimental center fix, doesn't work
-  // {
-  //   "key": "ctrl+u",
-  //   "when": "editorTextFocus && neovim.mode != insert",
-  //   "command": "runCommands",
-  //   "args": {
-  //     "commands": [
-  //       {
-  //         "command": "vscode-neovim.send",
-  //         "key": "ctrl+u",
-  //         "when": "editorTextFocus && neovim.mode != insert",
-  //         "args": "<C-u>"
-  //       },
-  //       {
-  //         "command": "cursorMove",
-  //         "args": {
-  //           "to": "viewPortCenter"
-  //         }
-  //       }
-  //     ]
-  //   }
-  // },
-  // {
-  //   "key": "ctrl+d",
-  //   "when": "editorTextFocus && neovim.mode != insert",
-  //   "command": "runCommands",
-  //   "args": {
-  //     "commands": [
-  //       {
-  //         "command": "editorScroll",
-  //         "args": {
-  //           "to": "down",
-  //           "by": "halfPage"
-  //         }
-  //       },
-  //       {
-  //         "command": "cursorMove",
-  //         "args": {
-  //           "to": "viewPortCenter"
-  //         }
-  //       }
-  //     ]
-  //   }
-  // },
   // fix scroll end
   {
     "key": "alt+h",
@@ -580,5 +516,35 @@
   {
     "key": "ctrl+i",
     "command": "-composer.startComposerPrompt"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "-vscode-neovim.escape",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal.c && neovim.init && !dirtyDiffVisible && !findWidgetVisible && !inReferenceSearchEditor && !markersNavigationVisible && !notebookCellFocused && !notificationCenterVisible && !parameterHintsVisible && !referenceSearchVisible && neovim.mode == 'normal' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "-vscode-neovim.escape",
+    "when": "editorTextFocus && neovim.ctrlKeysInsert.c && neovim.init && neovim.mode != 'normal' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal.a && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysInsert.a && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysNormal.x && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysInsert.x && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
   }
 ]
