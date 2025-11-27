@@ -1,6 +1,22 @@
 [tools]
+"aqua:BurntSushi/ripgrep" = "latest"
+"aqua:ajeetdsouza/zoxide" = "latest"
+"aqua:aristocratos/btop" = "latest"
+"aqua:atuinsh/atuin" = "latest"
+"aqua:cli/cli" = "latest"
+"aqua:dandavison/delta" = "latest"
+"aqua:dundee/gdu" = "latest"
+"aqua:jesseduffield/lazygit" = "latest"
+"aqua:junegunn/fzf" = "latest"
+"aqua:lsd-rs/lsd" = "latest"
+"aqua:neovim/neovim" = "latest"
+"aqua:sharkdp/bat" = "latest"
+"aqua:sharkdp/fd" = "latest"
+bun = "latest"
+deno = "latest"
 node = "22"
 usage = "latest"
+zig = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["python"]

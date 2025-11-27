@@ -19,9 +19,9 @@ zmodule termtitle
 # Utility aliases and functions. Adds colour to ls, grep and less.
 zmodule utility
 # auto venv activation
-zmodule MichaelAquilina/zsh-autoswitch-virtualenv -n autoswitch_virtualenv
+#zmodule MichaelAquilina/zsh-autoswitch-virtualenv -n autoswitch_virtualenv
 # nvm plugin
-zmodule lukechilds/zsh-nvm
+#zmodule lukechilds/zsh-nvm
 
 #
 # Prompt
