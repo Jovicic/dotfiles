@@ -11,6 +11,9 @@ On Windows, you probably want to symlink manually. Start a powershell as Admin a
 ```
 cmd /c mklink /d C:\Users\<username>\AppData\Local\nvim C:\Users\<username>\dotfiles\nvim\.config\nvim
 cmd /c mklink /d C:\Users\<username>\.config\wezterm C:\Users\<username>\dotfiles\wezterm\.config\wezterm
+
+cmd /c mklink "C:\Users\<username>\AppData\Roaming\Code\User\settings.json" "C:\Users\<username>\dotfiles\vscode\.config\Code\User\settings.json"
+cmd /c mklink "C:\Users\<username>\AppData\Roaming\Code\User\keybindings.json" "C:\Users\<username>\dotfiles\vscode\.config\Code\User\keybindings.json"
 ```
 On Windows the settings directories might not match those on linux, as seen in this example.
 
