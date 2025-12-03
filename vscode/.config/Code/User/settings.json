@@ -57,12 +57,10 @@
   "terminal.external.linuxExec": "/bin/zsh",
   "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
   "python.terminal.activateEnvironment": false,
-  "github.copilot.chat.generateTests.codeLens": true,
   "chat.agent.enabled": true,
   "editor.rulers": [
     120
   ],
-  "github.copilot.chat.editor.temporalContext.enabled": true,
   "httpyac.cookieJarEnabled": true,
   "ruff.lineLength": 120,
   "remote.autoForwardPortsSource": "hybrid",
