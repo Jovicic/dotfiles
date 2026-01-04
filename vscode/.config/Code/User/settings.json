@@ -16,9 +16,6 @@
   "editor.smoothScrolling": true,
   "editor.cursorSurroundingLines": 10,
   "vscode-neovim.neovimExecutablePaths.linux": "nvim",
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
   "vscode-neovim.useWSL": true,
   "workbench.activityBar.orientation": "vertical",
   // open json editor for settings
@@ -170,5 +167,14 @@
   "python.analysis.autoImportCompletions": true,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.selectedModel": "default",
+  "python.languageServer": "None",
+  "chat.useClaudeSkills": true,
+  "scm.repositories.explorer": true,
+  "scm.repositories.selectionMode": "single",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
   }
 }
