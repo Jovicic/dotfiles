@@ -1,0 +1,8 @@
+@github/copilot
+@google/gemini-cli
+@mermaid-js/mermaid-cli
+@openai/codex
+corepack
+neovim
+tree-sitter-cli
+

@@ -1,7 +1,6 @@
 [tools]
 "aqua:BurntSushi/ripgrep" = "latest"
 "aqua:ajeetdsouza/zoxide" = "latest"
-"aqua:aristocratos/btop" = "latest"
 "aqua:atuinsh/atuin" = "latest"
 "aqua:cli/cli" = "latest"
 "aqua:dandavison/delta" = "latest"
