@@ -198,5 +198,6 @@
   "python.languageServer": "None",
   "git.blame.ignoreWhitespace": true,
   "gitlens.blame.ignoreWhitespace": true,
-  "debug.breakpointsView.presentation": "tree"
+  "debug.breakpointsView.presentation": "tree",
+  "chat.viewSessions.orientation": "stacked"
 }
