@@ -167,7 +167,6 @@
   },
   "claudeCode.preferredLocation": "panel",
   "claudeCode.selectedModel": "default",
-  "chat.useClaudeSkills": true,
   "scm.repositories.explorer": true,
   "scm.repositories.selectionMode": "single",
   "cursor.cpp.enablePartialAccepts": true,
@@ -194,5 +193,10 @@
   "vue.inlayHints.vBindShorthand": true,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
-  }
+  },
+  "chat.useAgentSkills": true,
+  "python.languageServer": "None",
+  "git.blame.ignoreWhitespace": true,
+  "gitlens.blame.ignoreWhitespace": true,
+  "debug.breakpointsView.presentation": "tree"
 }
