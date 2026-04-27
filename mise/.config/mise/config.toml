@@ -11,6 +11,7 @@
 "aqua:neovim/neovim" = "latest"
 "aqua:sharkdp/bat" = "latest"
 "aqua:sharkdp/fd" = "latest"
+"github:ajeetdsouza/zoxide" = "latest"
 bun = "latest"
 deno = "latest"
 go = "latest"
