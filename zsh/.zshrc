@@ -141,9 +141,8 @@ export EDITOR=nvim  # set standard editor
 export UV_MANAGED_PYTHON=true
 
 # setup paths
-path+=($HOME/.local/bin)
-# path+=(/opt/nvim)
-export PATH
+typeset -U path PATH
+path=($HOME/.local/bin $path)
 
 # setup aliases
 alias vim=nvim
@@ -152,7 +151,6 @@ alias ls=lsd
 # alias gdu=gdu-go
 
 # initialize additional tools
-eval "$(zoxide init zsh)"
 # eval "$(fzf --zsh)"
 eval "$($HOME/.local/bin/mise activate zsh)"
 eval "$($HOME/.local/bin/mise completion zsh)"
@@ -160,6 +158,7 @@ eval "$($HOME/.local/bin/mise completion zsh)"
 # User specific environment and startup programs
 # . "$HOME/.cargo/env"
 
+eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 
 # Load optional personal/work configurations
