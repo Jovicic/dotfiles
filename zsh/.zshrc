@@ -141,14 +141,12 @@ export EDITOR=nvim  # set standard editor
 export UV_MANAGED_PYTHON=true
 
 # setup paths
-typeset -U path PATH
+typeset -U path PATH  # typeset deduplicates PATH
 path=($HOME/.local/bin $path)
 
 # setup aliases
 alias vim=nvim
 alias ls=lsd
-# alias bat=batcat
-# alias gdu=gdu-go
 
 # initialize additional tools
 # eval "$(fzf --zsh)"
