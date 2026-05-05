@@ -1,79 +1,61 @@
 # AGENTS.md
 
-This file guides the AI-Assistant when working with this dotfiles repository.
+This file guides AI assistants when working in this dotfiles repository.
 
 ## Repository overview
-- GNU Stow manages symlinks for app configs. Primary target is Linux/WSL; Windows uses manual symlinks.
-- Each app lives in `<app>/.config/<app>/`, matching `~/.config/<app>/` after stowing.
-- `.stowrc` sets `--target=~/` so all stows are relative to the home directory.
+- GNU Stow manages symlinks from this repo into the home directory.
+- Primary environment is Ubuntu on WSL. Plain Linux should follow the same structure; Windows-specific setup is manual and secondary.
+- Each stowed app should keep the shape it needs under `$HOME`. Most app configs live in `<app>/.config/<app>/`, which becomes `~/.config/<app>/` after stowing.
+- `.stowrc` sets `--target=~/`, so run `stow` from the repo root.
 
-## Key technologies and conventions
-- Neovim (AstroNvim + Lazy.nvim)
-  - Entry points: `nvim/.config/nvim/init.lua` → `lua/lazy_setup.lua` → `lua/polish.lua`
-  - Formatting: Stylua (2 spaces, 120 cols). Config: `nvim/.config/nvim/.stylua.toml`
-  - Linting: Selene (`nvim/.config/nvim/selene.toml`)
-  - Do not commit `nvim/.config/nvim/lazy-lock.json` (already ignored)
-- Shell: Zsh with Zim framework
-  - Main file: `zsh/.zshrc`; plugin definition: `zsh/.zimrc`; optional, untracked overlays: `~/.zshpersonal`, `~/.zshwork`
-- Version management: Mise (`mise/.config/mise/config.toml`)
-- Terminal: WezTerm (`wezterm/.config/wezterm/wezterm.lua`) with optional shell integration script `wezterm/.config/wezterm/wezterm.sh`
-- Packages: `Brewfile` (linuxbrew) for CLI tools (e.g., `rg`, `lazygit`, `stow`, `neovim`)
+## Setup expectations
+- Ubuntu base packages are listed in `ubuntu_packages` and can be installed with apt, for example:
+  ```bash
+  sudo apt update
+  xargs -a ubuntu_packages sudo apt install -y
+  ```
+- Keep package lists as plain package names, one per line, unless the consuming command changes.
+
+## Key technologies
+- Neovim: AstroNvim + Lazy.nvim
+  - Entry points: `nvim/.config/nvim/init.lua` -> `lua/lazy_setup.lua` -> `lua/polish.lua`
+  - Formatting: Stylua, configured by `nvim/.config/nvim/.stylua.toml`
+  - Linting: Selene, configured by `nvim/.config/nvim/selene.toml`
+  - Do not commit `nvim/.config/nvim/lazy-lock.json`; it is intentionally ignored.
+- Zsh: Zim framework
+  - Main file: `zsh/.zshrc`
+  - Plugin definition: `zsh/.zimrc`
+  - Optional untracked overlays: `~/.zshpersonal`, `~/.zshwork`
+- Mise: `mise/.config/mise/config.toml`
+- WezTerm: `wezterm/.config/wezterm/wezterm.lua`
+- Other stowable configs include Atuin, Bat, Btop, Gdu, IdeaVim, Lazygit, Poetry, VS Code-family editors, and Zellij.
 
 ## Common commands
-- Manage symlinks with Stow (run from repo root):
+- Stow one or more configs:
   ```bash
-  stow <app>          # e.g., stow nvim, stow wezterm, stow zsh
-  stow -D <app>       # delete symlinks for app
-  stow -R <app>       # restow if directory structure changed
+  stow zsh nvim wezterm mise
   ```
-- Verify after edits:
-  - Zsh: `source ~/.zshrc`
-  - Neovim: `nvim` then `:checkhealth`
-  - WezTerm: restart or reload config
-- Homebrew setup:
+- Remove or restow a config:
   ```bash
-  brew bundle                 # install packages from Brewfile
-  # To use brew-installed zsh as login shell
-  echo /home/linuxbrew/.linuxbrew/bin/zsh | sudo tee -a /etc/shells
-  chsh                        # select zsh
-  # To allow sudo to find brew binaries (for e.g. sudo nvim)
-  sudo visudo                 # append /home/linuxbrew/.linuxbrew/bin to secure_path
-  ```
-- VS Code extensions (optional):
-  ```bash
-  bash code_extensions.txt    # installs listed extensions
+  stow -D nvim
+  stow -R nvim
   ```
 
-## Windows manual symlinking (PowerShell as Admin)
-```powershell
-cmd /c mklink /d C:\Users\<username>\AppData\Local\nvim C:\Users\<username>\dotfiles\nvim\.config\nvim
-cmd /c mklink /d C:\Users\<username>\.config\wezterm C:\Users\<username>\dotfiles\wezterm\.config\wezterm
+## Verification after edits
+- Zsh: `source ~/.zshrc` or start a new shell.
+- Neovim: open `nvim`, then run `:checkhealth`.
+- WezTerm: restart or reload the config.
+- Stow structure: run `stow -n -v <app>` for a dry run when changing package layout.
 
-cmd /c mklink "C:\Users\<username>\AppData\Roaming\Code\User\settings.json" "C:\Users\<username>\dotfiles\vscode\.config\Code\User\settings.json"
-cmd /c mklink "C:\Users\<username>\AppData\Roaming\Code\User\keybindings.json" "C:\Users\<username>\dotfiles\vscode\.config\Code\User\keybindings.json"
-```
+## Change guidelines
+- Keep edits minimal and scoped to the requested config or documentation.
+- Preserve Unix line endings.
+- Follow the existing `<app>/.config/<app>/` layout unless the target program expects a different home-relative path.
+- Prefer explicit, readable configuration over clever indirection.
+- Do not reformat unrelated files.
+- Do not commit generated lockfiles from plugin managers.
 
-## Do / Don’t for changes
-- Do follow the `<app>/.config/<app>/` structure so Stow can manage links.
-- Do keep Unix line endings.
-- Do run the verification steps after edits.
-- Don’t commit lockfiles generated by plugin managers (e.g., Neovim `lazy-lock.json`).
-- Don’t reformat unrelated files; keep edits minimal and scoped.
-
-## Quick repo map
-- `nvim/.config/nvim/` — AstroNvim user configuration (Lua)
-- `zsh/` — Zsh configuration (`.zshrc`, `.zimrc`, `.zshenv`, optional includes)
-- `wezterm/.config/wezterm/` — WezTerm configuration (`wezterm.lua`, optional `wezterm.sh`)
-- `mise/.config/mise/config.toml` — Mise toolchain config
-- `Brewfile` — Homebrew package bundle
-- `code_extensions.txt` — Optional VS Code extensions install script
-- `.stowrc` — Stow target set to home directory
-
-## Typical workflows
-- Add or modify Neovim plugins/settings: edit files under `nvim/.config/nvim/lua/…`, run `stow nvim`, open `nvim`, run `:checkhealth`.
-- Adjust shell behavior: edit `zsh/.zshrc`, run `stow zsh`, then `source ~/.zshrc`.
-- Tweak WezTerm: edit `wezterm/.config/wezterm/wezterm.lua`, `stow wezterm`, reload WezTerm.
-
-## Notes
-- Repo targets Linux/WSL primarily; paths may differ on Windows.
-- Keep configuration readable and explicit; prefer descriptive names and small, focused edits.
+## Windows notes
+- Windows paths and config locations can differ from Linux/WSL.
+- Manual symlinks may be needed for native Windows tools.
+- Keep Windows-only instructions in README addenda unless the task is specifically about Windows.
