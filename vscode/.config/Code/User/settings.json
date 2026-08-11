@@ -1,6 +1,6 @@
 {
   "redhat.telemetry.enabled": false,
-  "editor.fontFamily": "'JetBrainsMono Nerd Font', Menlo, Monaco, Consolas, 'Droid Sans Mono', 'Courier New', monospace",
+  "editor.fontFamily": "'BerkeleyMono Nerd Font Mono',' JetBrainsMono Nerd Font', Menlo, Monaco, Consolas, 'Droid Sans Mono', 'Courier New', monospace",
   "editor.fontLigatures": true,
   "window.zoomLevel": 1.0,
   "github.experimental.multipleAccounts": true,
@@ -19,9 +19,9 @@
   "vscode-neovim.useWSL": true,
   "workbench.activityBar.orientation": "vertical",
   // open json editor for settings
-  "workbench.settings.editor": "json",
+  "workbench.settings.editor": "ui",
   // Font size
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
   "terminal.integrated.fontSize": 14,
   // ui
   "editor.minimap.enabled": true,
@@ -95,7 +95,7 @@
     "editor.formatOnSave": false,
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "update.releaseTrack": "prerelease",
+  "update.releaseTrack": "dev",
   "cursorpyright.analysis.ignore": [],
   "workbench.settings.showAISearchToggle": true,
   "telemetry.editStats.enabled": false,
@@ -106,7 +106,6 @@
   "playwright.reuseBrowser": true,
   "python.analysis.typeCheckingMode": "basic",
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "editor.aiStats.enabled": true,
   "github.copilot.chat.scopeSelection": true,
   "chat.agentSessionsViewLocation": "view",
   "chat.tools.terminal.autoApprove": {
@@ -199,5 +198,50 @@
   "git.blame.ignoreWhitespace": true,
   "gitlens.blame.ignoreWhitespace": true,
   "debug.breakpointsView.presentation": "tree",
-  "chat.viewSessions.orientation": "stacked"
+  "excalidraw.theme": "auto",
+  "chat.viewSessions.orientation": "stacked",
+  "chat.viewSessions.enabled": false,
+  "workbench.colorTheme": "Dark 2026",
+  "inlineChat.affordance": "gutter",
+  "inlineChat.defaultModel": "GPT-5.3-Codex (copilot)",
+  "git.blame.statusBarItem.enabled": true,
+  "git.blame.editorDecoration.enabled": false,
+  "githubPullRequests.pullBranch": "never",
+  "github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
+  "github.copilot.chat.reviewSelection.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "terminal.integrated.enableImages": true,
+  "chat.imageCarousel.enabled": true,
+  "imageCarousel.explorerContextMenu.enabled": true,
+  "chatgpt.followUpQueueMode": "steer",
+  "chatgpt.commentCodeLensEnabled": false,
+  "update.mode": "silentlyApplyOnQuit",
+  "chat.experimental.incrementalRendering.enabled": true,
+  "git.addAICoAuthor": "off",
+  "workbench.diffEditorAssociations": {
+    "*.md": "vscode.markdown.preview.editor"
+  },
+  "github.copilot.chat.claudeAgent.allowAutoPermissions": true,
+  "extensions.autoUpdate": "off",
+  "workbench.editor.empty.hint": "hidden",
+  "window.autoDetectColorScheme": false,
+  "chat.agentHost.enabled": true,
+  "chat.agents.claude.preferAgentHost": true,
+  "workbench.experimental.modernUI": true,
+  "chat.assistedPermissions.enabled": true,
+  "chat.editor.claude.preferAgentHost": true,
+  "chat.editor.codex.preferAgentHost": true,
+  "chat.exploreAgent.defaultModel": "GPT-5.6 Luna (copilot)",
+  "chat.experimental.permissionsSandboxToggle.enabled": true,
+  "chat.defaultConfiguration": {
+    "approvals": "assisted"
+  },
+  "agents.voice.showTranscript": true,
+  "agents.voice.speakResponses": false,
+  "agents.voice.liveTranscript": true,
+  "terminal.integrated.resizeDimensionsOverlay.enabled": false,
+  "github.copilot.enable": {
+    "python": true
+  },
+  "breadcrumbs.showEditorType": true
 }

@@ -17,6 +17,7 @@ go = "latest"
 node = "22"
 usage = "latest"
 zig = "latest"
+jbang = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["python"]
